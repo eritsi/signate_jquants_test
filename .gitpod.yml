@@ -4,6 +4,7 @@ tasks:
     init: |
       pip install quandl
       read -p "Enter Your quandl API Token(free for login): " QUANDL_TOKEN
+      mkdir quandl_data
       sed -e s/MY_TOKEN/$QUANDL_TOKEN/g ./quandl_template.py > ./quandl_execute.py
       python quandl_execute.py
       pip install matplotlib
