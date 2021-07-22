@@ -1,6 +1,6 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - name: Download quandl data
+  - name: Download quandl data. see https://www.quandl.com/tools/api
     init: |
       pip install quandl
       read -p "Enter Your quandl API Token(free for login): " QUANDL_TOKEN
