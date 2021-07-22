@@ -6,6 +6,7 @@ tasks:
       read -p "Enter Your quandl API Token(free for login): " QUANDL_TOKEN
       sed -e s/MY_TOKEN/$QUANDL_TOKEN/g ./quandl_template.py > ./quandl_execute.py
       python quandl_execute.py
+      pip install matplotlib
   - name: open jupyter notebook
     init: |
       jupyter notebook --ip=*
