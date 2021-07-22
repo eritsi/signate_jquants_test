@@ -4,8 +4,8 @@ tasks:
     init: |
       pip install quandl
       read -p "Enter Your quandl API Token(free for login): " QUANDL_TOKEN
-      sed -e s/MY_TOKEN/$QUANDL_TOKEN/g ./quandl_template.py > ./quandle_execute.py
-      python quandle_execute.py
+      sed -e s/MY_TOKEN/$QUANDL_TOKEN/g ./quandl_template.py > ./quandl_execute.py
+      python quandl_execute.py
 
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
