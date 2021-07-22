@@ -6,9 +6,12 @@ tasks:
       read -p "Enter Your quandl API Token(free for login): " QUANDL_TOKEN
       sed -e s/MY_TOKEN/$QUANDL_TOKEN/g ./quandl_template.py > ./quandl_execute.py
       python quandl_execute.py
-
+  - name: open jupyter notebook
+    init: |
+      jupyter notebook --ip=*
+    openMode: split-right
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
-  - port: 3000
+  - port: 8888
     onOpen: open-preview
