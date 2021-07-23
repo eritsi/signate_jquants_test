@@ -8,6 +8,7 @@ tasks:
       sed -e s/MY_TOKEN/$QUANDL_TOKEN/g ./quandl_template.py > ./quandl_execute.py
       python quandl_execute.py
       pip install matplotlib
+      pip install seaborn
   - name: open jupyter notebook
     init: |
       jupyter notebook --ip=*
