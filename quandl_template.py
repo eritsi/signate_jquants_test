@@ -9,7 +9,14 @@ quandl.ApiConfig.api_key="MY_TOKEN"
 # free but the data stops at the end of 2017
 # https://www.quandl.com/data/TSE-Tokyo-Stock-Exchange/documentation
 # TSE/7203 for toyota
-price = quandl.get('TSE/7974')
+list_of_codes = [7203, 7974, 9984]
+for i, code in enumerate(list_of_codes):
+    temp = quandl.get('TSE/' + str(code))
+    temp["ticker"] = code
+    if i==0:
+        price = temp
+    else:
+        price = pd.concat([price, temp])
 price.to_csv('./quandl_data/stock_price.csv')
 
 # premium : just an example for free 
